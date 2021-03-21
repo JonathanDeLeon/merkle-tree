@@ -23,9 +23,12 @@ class MerkleTree:
         # hash given list of transactions
         for item in self.transactions:
             self.hashList.append(hashlib.sha256(item.encode('utf-8')).hexdigest())
+
         if len(self.hashList) > 1:
             self.generateTree(self.hashList)
             self.tree.extend(self.hashList[0:len(self.transactions)])
+            if len(self.transactions) % 2 != 0:
+                self.tree.append(self.hashList[len(self.transactions)-1])
 
     # recursively generate parent hashed nodes for the given list
     def generateTree(self, hashList):
