@@ -2,7 +2,7 @@
 # Jonathan De Leon
 # CSCI 531 Applied Cryptography
 # March, 2021
-# Thie file creates an audit proof to verify a specific data node is included in the Merkle Tree
+# This file creates an audit proof to verify a specific data node is included in the Merkle Tree
 # It uses the output file from `buildmtree.py`
 
 
